@@ -1,0 +1,6 @@
+// SPDX-FileCopyrightText: 2024-2025 Rafael V. Volkmer <rafael.v.volkmer@gmail.com>
+// SPDX-License-Identifier: MIT
+
+module github.com/rafaelvolkmer/codeaudit
+
+go 1.22

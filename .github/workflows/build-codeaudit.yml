@@ -1,0 +1,57 @@
+name: Build CodeAudit
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-codeaudit:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ${{ github.workspace }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Normalize C fixtures for Go tests
+        run: |
+          echo "PWD: $(pwd)"
+          if [ -d "tests/data" ]; then
+            echo "Found tests/data, normalizing C fixtures..."
+            mkdir -p tests/testdata
+            find tests/data -maxdepth 1 -type f -name '*.c' -exec mv {} tests/testdata/ \;
+            rmdir tests/data 2>/dev/null || true
+          else
+            echo "No tests/data directory found, skipping fixture normalization."
+          fi
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.22.x"
+          cache: true
+
+      - name: Show Go version
+        run: go version
+
+      - name: Download dependencies
+        run: |
+          echo "PWD: $(pwd)"
+          find . -maxdepth 3 -name 'go.mod' -print || true
+          if [ -f "go.mod" ]; then
+            echo "Found go.mod, running go mod download..."
+            go mod download
+          else
+            echo "⚠️ No go.mod in $(pwd) – skipping go mod download"
+          fi
+
+      - name: Build codeaudit CLI
+        run: go build -v ./cmd/codeaudit
+
+      - name: Run unit tests
+        run: go test ./...
