@@ -15,9 +15,23 @@ SPDX-License-Identifier: MIT
 
 </div>
 
-# codeaudit
+##
 
-`codeaudit` is a lightweight static code quality analyzer written in Go, designed
+<p align="center">
+  <img src="readme/code_audit_logo.svg" alt="code audit logo" width="55%"/>
+</p>
+
+##
+
+<div align="center">
+  by: Rafael V. Volkmer - @RafaelVVolkmer - rafael.v.volkmer@gmail.com
+</div>
+
+---
+
+# CodeAudit
+
+`CodeAudit` is a lightweight static code quality analyzer written in Go, designed
 with **Clean Architecture** and **Clean Code** principles.
 
 It focuses on:
@@ -63,23 +77,6 @@ Reports are stored at:
 
 ---
 
-## 💻 Tech Stack and Environment
-
-| **Category**                    | **Technologies and Tools** |
-|---------------------------------|----------------------------|
-| **Implementation Language**     | [![Go](https://img.shields.io/badge/Go-white?style=for-the-badge&logo=go&logoColor=00ADD8&labelColor=rgba(0,0,0,0)&color=rgba(0,0,0,0))](https://go.dev) |
-| **Analyzed Languages (initial)**| [![C](https://img.shields.io/badge/C-white?style=for-the-badge&logo=c&logoColor=%23A8B9CC&labelColor=rgba(0,0,0,0)&color=rgba(0,0,0,0))](https://en.cppreference.com/w/c/language.html) [![Go](https://img.shields.io/badge/Go-white?style=for-the-badge&logo=go&logoColor=00ADD8&labelColor=rgba(0,0,0,0)&color=rgba(0,0,0,0))](https://go.dev) |
-| **Build / Tooling**            | [![Go Toolchain](https://img.shields.io/badge/go%20toolchain-white?style=for-the-badge&logo=go&logoColor=00ADD8&labelColor=rgba(0,0,0,0)&color=rgba(0,0,0,0))](https://go.dev/doc/install) |
-| **Version Control**            | [![Git](https://img.shields.io/badge/Git-white?style=for-the-badge&logo=git&logoColor=%23F05032&logoSize=32&labelColor=rgba(0,0,0,0)&color=rgba(0,0,0,0))](https://git-scm.com) [![GitHub](https://img.shields.io/badge/GitHub-white?style=for-the-badge&logo=github&logoColor=%23181717&logoSize=32&labelColor=rgba(0,0,0,0)&color=rgba(0,0,0,0))](https://github.com) |
-| **Documentation**              | [![Markdown](https://img.shields.io/badge/Markdown-white.svg?style=for-the-badge&logo=markdown&logoColor=%23000000&logoSize=32&labelColor=rgba(0,0,0,0)&color=rgba(0,0,0,0))](https://www.markdownguide.org) |
-| **Support Tools**              | [![Docker](https://img.shields.io/badge/Docker-white?style=for-the-badge&logo=docker&logoColor=%232496ED&logoSize=32&labelColor=rgba(0,0,0,0)&color=rgba(0,0,0,0))](https://www.docker.com) |
-| **Operating System**           | [![Linux](https://img.shields.io/badge/Linux-white?style=for-the-badge&logo=linux&logoColor=000000&labelColor=rgba(0,0,0,0)&color=rgba(0,0,0,0))](https://kernel.org) |
-| **Editor / IDE**               | [![Neovim](https://img.shields.io/badge/Neovim-white?style=for-the-badge&logo=neovim&logoColor=%2357A143&logoSize=32&labelColor=rgba(0,0,0,0)&color=rgba(0,0,0,0))](https://neovim.io) [![VS Code](https://img.shields.io/badge/VS%20Code-white?style=for-the-badge&logo=visualstudiocode&logoColor=007ACC&labelColor=rgba(0,0,0,0)&color=rgba(0,0,0,0))](https://code.visualstudio.com) |
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
----
-
 ## 🖥️ CLI Preview
 
 A quick glimpse of the `codeaudit` CLI in action:
@@ -93,6 +90,23 @@ This preview shows the text-based report format, including:
 - Project summary (files, functions, average and max CCN).
 - Hotspots (complexity × churn).
 - Per-function metrics table with CCN, cognitive complexity, NLOC, parameters and more.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
+
+## 💻 Tech Stack and Environment
+
+| **Category**                    | **Technologies and Tools** |
+|---------------------------------|----------------------------|
+| **Implementation Language**     | [![Go](https://img.shields.io/badge/Go-white?style=for-the-badge&logo=go&logoColor=00ADD8&labelColor=rgba(0,0,0,0)&color=rgba(0,0,0,0))](https://go.dev) |
+| **Analyzed Languages (initial)**| [![C](https://img.shields.io/badge/C-white?style=for-the-badge&logo=c&logoColor=%23A8B9CC&labelColor=rgba(0,0,0,0)&color=rgba(0,0,0,0))](https://en.cppreference.com/w/c/language.html) [![Go](https://img.shields.io/badge/Go-white?style=for-the-badge&logo=go&logoColor=00ADD8&labelColor=rgba(0,0,0,0)&color=rgba(0,0,0,0))](https://go.dev) |
+| **Build / Tooling**            | [![Go Toolchain](https://img.shields.io/badge/go%20toolchain-white?style=for-the-badge&logo=go&logoColor=00ADD8&labelColor=rgba(0,0,0,0)&color=rgba(0,0,0,0))](https://go.dev/doc/install) |
+| **Version Control**            | [![Git](https://img.shields.io/badge/Git-white?style=for-the-badge&logo=git&logoColor=%23F05032&logoSize=32&labelColor=rgba(0,0,0,0)&color=rgba(0,0,0,0))](https://git-scm.com) [![GitHub](https://img.shields.io/badge/GitHub-white?style=for-the-badge&logo=github&logoColor=%23181717&logoSize=32&labelColor=rgba(0,0,0,0)&color=rgba(0,0,0,0))](https://github.com) |
+| **Documentation**              | [![Markdown](https://img.shields.io/badge/Markdown-white.svg?style=for-the-badge&logo=markdown&logoColor=%23000000&logoSize=32&labelColor=rgba(0,0,0,0)&color=rgba(0,0,0,0))](https://www.markdownguide.org) |
+| **Support Tools**              | [![Docker](https://img.shields.io/badge/Docker-white?style=for-the-badge&logo=docker&logoColor=%232496ED&logoSize=32&labelColor=rgba(0,0,0,0)&color=rgba(0,0,0,0))](https://www.docker.com) |
+| **Operating System**           | [![Arch Linux](https://img.shields.io/badge/Arch_Linux-white?style=for-the-badge&logo=archlinux&logoColor=%231793D1&logoSize=32&labelColor=rgba(0,0,0,0)&color=rgba(0,0,0,0)&cacheSeconds=3600)](https://archlinux.org)  |
+| **Editor / IDE**               | [![Neovim](https://img.shields.io/badge/Neovim-white?style=for-the-badge&logo=neovim&logoColor=%2357A143&logoSize=32&labelColor=rgba(0,0,0,0)&color=rgba(0,0,0,0))](https://neovim.io) |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -113,13 +127,6 @@ on software metrics, static analysis and maintainable design:
 | *Object-Oriented Software Construction*                                                | Bertrand Meyer, 2nd ed., 1997          |
 | *Measuring Software Quality*                                                           | Capers Jones, 1996                     |
 | *Software Metrics: Establishing a Company-Wide Program*                                | Alain Abran, Jeff W. Suryn et al., 2010 |
-
-These references guide:
-
-- The choice of complexity metrics (McCabe, Halstead).
-- Aggregated maintainability indicators and risk mapping.
-- Design and refactoring strategies for highly coupled or complex modules.
-- The philosophy of keeping metrics actionable and developer-friendly.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
